@@ -9,73 +9,73 @@
 function daysPosition(day, offset) {
     switch (day) {
         case "sunday":
-            if (offset == false) {
-                return 1;
+            if (offset == true) {
+                return 7;
                 break;
             }
             else {
-                return 7;
+                return 1;
                 break;
             }
             break;
         case "monday":
-            if (offset == false) {
-                return 2;
+            if (offset == true) {
+                return 1;
                 break;
             }
             else {
-                return 1;
+                return 2;
                 break;
             }
             break;
 
         case "tuesday":
-            if (offset == false) {
-                return 3;
+            if (offset == true) {
+                return 2;
                 break;
             }
             else {
-                return 2;
+                return 3;
                 break;
             }
             break;
         case "wednesday":
-            if (offset == false) {
-                return 4;
+            if (offset == true) {
+                return 3;
                 break;
             }
             else {
-                return 3;
+                return 4;
                 break;
             }
             break;
         case "thursday":
-            if (offset == false) {
-                return 5;
+            if (offset == true) {
+                return 4;
                 break;
             }
             else {
-                return 4
+                return 5;
                 break;
             }
             break;
         case "friday":
-            if (offset == false) {
-                return 6;
+            if (offset == true) {
+                return 5;
                 break;
             }
             else {
-                return 5;
+                return 6;
                 break;
             }
             break;
         case "saturday":
-            if (offset == false) {
-                return 7;
+            if (offset == true) {
+                return 6;
                 break;
             }
             else {
-                return 6;
+                return 7;
                 break;
             }
             break;
@@ -102,33 +102,30 @@ function daysPosition(day, offset) {
  */
 
 function golfScore(score, par) {
-    switch (score, par) {
-        case score == par - 3:
-            return "Ace"
+    console.log(score, par)
+    switch (score - par) {
+        case -3:
+            return "Ace";
             break;
-        case score == par - 2:
+        case -2:
             return "Eagle";
             break;
-
-        case score == par - 1:
+        case -1:
             return "Birdie";
             break;
-
-        case score == par:
+        case 0:
             return "Par";
             break;
-        case score == par + 1:
+        case 1:
             return "Bogie";
             break;
-        case score == par + 2:
+        case 2:
             return "Double Bogie";
             break;
-        case score >= par + 3:
-            return "Ouch";
-
-
-
+        default:
+            return "ouch"
     }
+
 }
 
 
